@@ -12,19 +12,22 @@ An adaptive finite-element solver for elliptic and parabolic PDEs.
 
 - Has an interface to read GMSH meshes  
 - Supports [*conforming*](#conforming-mesh) and [*non-conforming*](#non-conforming-mesh) triangle meshes
+- Supports using [*macroelements*](#mesh-with-macroelements) on a background mesh
 - Provides a flexible framework for mesh [*adaptation*](#adaptive-mesh)
 
 **Discretization:**
 
 *Methods*
 
-- Nodal Continuous Galerkin Method 
-- Nodal Finite Volume Element Method
+- Continuous Galerkin Method 
+- Finite Volume Element Method
+- Edge-based Poincaré-Steklov scheme¹
+
+¹ Under finalization
 
 *Features*
 
 - Ensures mass conservation on adaptive meshes
-- Supports inter-level coupling in *hierarchical discretization* schemes
 
 ## Funding
 
@@ -46,15 +49,21 @@ project number [515939493](https://gepris.dfg.de/gepris/projekt/515939493?langua
 
 ### Conforming mesh
 
-<img src="./docs/images/conforming-mesh.png" width="450">
+<img src="./docs/images/conforming-mesh.png" width="500">
 
 ### Non-conforming mesh
 
-<img src="./docs/images/non-conforming-mesh.png" width="450">
+<img src="./docs/images/non-conforming-mesh.png" width="500">
+
+### Mesh with macroelements
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="./docs/images/mrs-mesh.png" width="390">
 
 ### Adaptive mesh
 
-&nbsp;&nbsp;&nbsp;&nbsp;<img src="docs/images/circ-amr.gif" alt="Demo GIF" width="400"/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="docs/images/circ-amr.gif" alt="Demo GIF" width="400"/>
 
 ### Pin-to-plate mesh
 
